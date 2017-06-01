@@ -19,8 +19,8 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     MaterialTabHost tabHost;
     ViewPager pager;
     ViewPagerAdapter adapter;
-    public static MaterialBadgeTextView badge_new,badge_pending,badge_complete,badge_advanced;
-    String [] tab_name= { "New "," Pending ", " Complete " ," Advanced "};
+    public static MaterialBadgeTextView badge_new,badge_pending,badge_history;
+    String [] tab_name= { "New "," Pending ", " History " };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +35,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
 
         badge_new=(MaterialBadgeTextView)this.findViewById(R.id.badge_notification_1);
         badge_pending=(MaterialBadgeTextView)this.findViewById(R.id.badge_notification_2);
-        badge_complete=(MaterialBadgeTextView)this.findViewById(R.id.badge_notification_3);
-        badge_advanced=(MaterialBadgeTextView)this.findViewById(R.id.badge_notification_4);
+        badge_history=(MaterialBadgeTextView)this.findViewById(R.id.badge_notification_3);
 
 
         // init view pager
@@ -88,31 +87,20 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
                 changeBadgeNumber();
                 badge_new.setBackgroundColor(Color.parseColor("#f5e722"));
                 badge_pending.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_complete.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_advanced.setBackgroundColor(Color.parseColor("#fffde7"));
+                badge_history.setBackgroundColor(Color.parseColor("#fffde7"));
 
             } break;
             case 1: {
                 changeBadgeNumber();
                 badge_pending.setBackgroundColor(Color.parseColor("#f5e722"));
                 badge_new.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_complete.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_advanced.setBackgroundColor(Color.parseColor("#fffde7"));
+                badge_history.setBackgroundColor(Color.parseColor("#fffde7"));
 
             } break;
             case 2: {
                 changeBadgeNumber();
-                badge_complete.setBackgroundColor(Color.parseColor("#f5e722"));
+                badge_history.setBackgroundColor(Color.parseColor("#f5e722"));
                 badge_pending.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_new.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_advanced.setBackgroundColor(Color.parseColor("#fffde7"));
-
-            } break;
-            case 3: {
-                changeBadgeNumber();
-                badge_advanced.setBackgroundColor(Color.parseColor("#f5e722"));
-                badge_pending.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_complete.setBackgroundColor(Color.parseColor("#fffde7"));
                 badge_new.setBackgroundColor(Color.parseColor("#fffde7"));
 
             } break;
@@ -157,12 +145,12 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
 
         @Override
         public int getCount() {
-            return 4;
+            return 3;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return "Section " + position;
+            return "Sec " + position;
         }
 
     }

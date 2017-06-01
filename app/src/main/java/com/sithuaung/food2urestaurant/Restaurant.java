@@ -4,70 +4,71 @@ package com.sithuaung.food2urestaurant;
  * Created by sithuaung on 6/21/16.
  */
 class Restaurant {
-    String restaurant_name;
-    String restaurant_type;
-    String waiting_time;
-    String delivery_accept_time;
-    String service_price;
+         String order_id;
+    String pick_up_time;
+    String pick_up_by;
+    String order_item_no;
+    String order_code;
+    String status;
 
-    int restaurant_photo;
-
-    public String getRestaurant_name() {
-        return restaurant_name;
+    public String getOrder_id() {
+        return order_id;
     }
 
-    public String getRestaurant_type() {
-        return restaurant_type;
+    public void setOrder_id(String order_id) {
+
+        this.order_id = order_id;
     }
 
-    public String getWaiting_time() {
-        return waiting_time;
+
+    public void setPick_up_time(String pick_up_time) {
+        this.pick_up_time = pick_up_time;
     }
 
-    public String getDelivery_accept_time() {
-        return delivery_accept_time;
+    public void setPick_up_by(String pick_up_by) {
+        this.pick_up_by = pick_up_by;
     }
 
-    public String getService_price() {
-        return service_price;
+    public void setOrder_item_no(String order_item_no) {
+        this.order_item_no = order_item_no;
     }
 
-    public int getRestaurant_photo() {
-        return restaurant_photo;
+    public void setOrder_code(String order_code) {
+        this.order_code = order_code;
     }
 
-    public void setRestaurant_name(String restaurant_name) {
-
-        this.restaurant_name = restaurant_name;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public void setRestaurant_type(String restaurant_type) {
-        this.restaurant_type = restaurant_type;
+    public String getPick_up_time() {
+
+        return pick_up_time;
     }
 
-    public void setWaiting_time(String waiting_time) {
-        this.waiting_time = waiting_time;
+    public String getPick_up_by() {
+        return pick_up_by;
     }
 
-    public void setDelivery_accept_time(String delivery_accept_time) {
-        this.delivery_accept_time = delivery_accept_time;
+    public String getOrder_item_no() {
+        return order_item_no;
     }
 
-    public void setService_price(String service_price) {
-        this.service_price = service_price;
+    public String getOrder_code() {
+        return order_code;
     }
 
-    public void setRestaurant_photo(int restaurant_photo) {
-        this.restaurant_photo = restaurant_photo;
+    public String getStatus() {
+        return status;
     }
 
-    Restaurant(String restaurant_name, String delivery_accept_time, String restaurant_type, String service_price, String waiting_time, int restaurant_photo) {
-        this.restaurant_name = restaurant_name;
-        this.delivery_accept_time = delivery_accept_time;
-        this.restaurant_type = restaurant_type;
-        this.service_price = service_price;
-        this.waiting_time = waiting_time;
-        this.restaurant_photo = restaurant_photo;
+    Restaurant(String pick_up_time, String pick_up_by, String order_item_no, String order_code, String status, String order_id) {
+        this.pick_up_time = pick_up_time;
+        this.pick_up_by = pick_up_by;
+        this.order_item_no = order_item_no;
+        this.order_code = order_code;
+        this.status = status;
+        this.order_id=order_id;
     }
     Restaurant(){
 

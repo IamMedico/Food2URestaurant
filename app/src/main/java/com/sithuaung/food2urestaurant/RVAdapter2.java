@@ -43,20 +43,12 @@ public class RVAdapter2 extends RecyclerView.Adapter<RVAdapter2.PersonViewHolder
 
     @Override
     public void onBindViewHolder(PersonViewHolder personViewHolder, final int i) {
-        personViewHolder.restaurant_name.setText(restaurants.get(i).restaurant_name);
-        personViewHolder.delivery_accept_time.setText(restaurants.get(i).delivery_accept_time);
-        personViewHolder.restaurant_type.setText(restaurants.get(i).restaurant_type);
-        personViewHolder.service_price.setText(restaurants.get(i).service_price);
-        personViewHolder.waiting_time.setText(restaurants.get(i).waiting_time);
-//        personViewHolder.restaurant_photo.setImageResource(restaurants.get(i).restaurant_photo);
-
-        personViewHolder.confrim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rc.onClick(i,restaurants.get(i));
-            }
-        });
-
+        personViewHolder.order_no.setText(restaurants.get(i).order_id);
+        personViewHolder.pick_up_time.setText(restaurants.get(i).pick_up_time);
+        personViewHolder.pick_up_by.setText(restaurants.get(i).pick_up_by);
+        personViewHolder.order_item_count.setText(restaurants.get(i).order_item_no);
+        personViewHolder.order_code.setText(restaurants.get(i).order_code);
+        personViewHolder.status.setText(restaurants.get(i).status);
     }
 
     @Override
@@ -66,25 +58,24 @@ public class RVAdapter2 extends RecyclerView.Adapter<RVAdapter2.PersonViewHolder
 
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView restaurant_name;
-        TextView delivery_accept_time;
-        TextView restaurant_type;
-        TextView service_price;
-        TextView waiting_time;
-        ImageView restaurant_photo;
-        Button confrim;
+        TextView order_no;
+        TextView pick_up_time;
+        TextView pick_up_by;
+        TextView order_item_count;
+        TextView order_code;
+        TextView status;
 
 
         PersonViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cv);
-            restaurant_name = (TextView)itemView.findViewById(R.id.restaurant_name);
-            delivery_accept_time = (TextView)itemView.findViewById(R.id.delivery_accept_time);
-            restaurant_type = (TextView)itemView.findViewById(R.id.restaurant_type);
-            service_price = (TextView)itemView.findViewById(R.id.service_price);
-            waiting_time = (TextView)itemView.findViewById(R.id.waiting_time);
-            restaurant_photo = (ImageView)itemView.findViewById(R.id.restaurant_photo);
-            confrim = (Button) itemView.findViewById(R.id.confirm);
+            order_no = (TextView)itemView.findViewById(R.id.order_no);
+            pick_up_time = (TextView)itemView.findViewById(R.id.pick_up_time);
+            pick_up_by = (TextView)itemView.findViewById(R.id.pick_up_by);
+            order_item_count = (TextView)itemView.findViewById(R.id.order_item_count);
+            order_code = (TextView)itemView.findViewById(R.id.order_code);
+            status = (TextView) itemView.findViewById(R.id.status);
+//            confrim = (Button) itemView.findViewById(R.id.confirm);
 
         }
     }

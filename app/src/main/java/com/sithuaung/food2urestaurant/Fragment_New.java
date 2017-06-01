@@ -20,6 +20,8 @@ import java.util.List;
 public class Fragment_New extends Fragment implements RVAdapter1.recycler_confirm_click {
     RecyclerView recyclerView;
     public static RVAdapter1 recycler_adapter;
+    Restaurant aa;
+    List<Restaurant> array_list;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,14 +38,17 @@ public class Fragment_New extends Fragment implements RVAdapter1.recycler_confir
 
     }
 
-    private List<Restaurant> getRestaurant(){
-        Restaurant aa=new Restaurant();
-        List<Restaurant> array_list=new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            aa.setRestaurant_name(String.valueOf(i));
-            aa.setDelivery_accept_time(String.valueOf(i));
-            aa.setRestaurant_photo(i);
-            aa.setRestaurant_type(String.valueOf(i));
+    public List<Restaurant> getRestaurant(){
+
+         array_list=new ArrayList<>();
+        for (int i = 1; i < 30; i++) {
+            aa=new Restaurant();
+            aa.setOrder_item_no(String.valueOf(i));
+            aa.setPick_up_time(String.valueOf(i));
+            aa.setPick_up_by("Ko Ko");
+            aa.setOrder_id(String.valueOf(i));
+            aa.setOrder_code("A123"+i);
+            aa.setStatus("Complete");
            array_list.add(aa);
         }
 
