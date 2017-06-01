@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#FD5C2A"
+        android:layout_height="340dp"
+        android:weightSum="1">
+        <ImageView
+            android:src="@mipmap/food2u"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.36" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="50dp"
+        android:orientation="vertical">
+
+
+
+        <!--<com.github.florent37.materialtextfield.MaterialTextField-->
+            <!--android:layout_width="400dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="23dp"-->
+            <!--android:layout_marginRight="23dp"-->
+            <!--app:mtf_animationDuration="300"-->
+            <!--app:mtf_cardCollapsedHeight="4dp"-->
+            <!--app:mtf_image="@drawable/user_icon"-->
+            <!--app:mtf_labelColor="#978e8e"-->
+            <!--app:mtf_openKeyboardOnFocus="true">-->
+
+            <EditText
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:hint="User Name"
+                android:textColor="#333"
+                android:textColorHint="#e4965b"
+                android:textSize="18sp" />
+
+        <!--</com.github.florent37.materialtextfield.MaterialTextField>-->
+
+
+        <!--<com.github.florent37.materialtextfield.MaterialTextField-->
+            <!--android:layout_width="400dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="23dp"-->
+            <!--android:layout_marginRight="23dp"-->
+            <!--app:mtf_animationDuration="300"-->
+            <!--app:mtf_cardCollapsedHeight="4dp"-->
+            <!--app:mtf_image="@drawable/password_icon"-->
+            <!--app:mtf_labelColor="#978e8e"-->
+            <!--app:mtf_openKeyboardOnFocus="true">-->
+
+            <EditText
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:hint="Password"
+                android:layout_marginTop="28dp"
+                android:textColor="#333"
+                android:inputType="numberPassword"
+                android:textColorHint="#e4965b"
+                android:textSize="18sp" />
+
+        <!--</com.github.florent37.materialtextfield.MaterialTextField>-->
+
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="#feface"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="44dp"
+            android:text="Log In " />
+
+
+    </LinearLayout>
+
+
+    <!--<pl.droidsonroids.gif.GifTextView-->
+        <!--android:id="@+id/img"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@mipmap/medico1"-->
+        <!--/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="220dp"
+        android:layout_height="120dp"
+        android:background="@mipmap/road_back"
+        >
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+
+        android:src="@mipmap/rider"/>
+    </LinearLayout>
+</LinearLayout>
