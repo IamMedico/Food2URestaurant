@@ -43,12 +43,12 @@ public class RVAdapter1 extends RecyclerView.Adapter<RVAdapter1.PersonViewHolder
 
     @Override
     public void onBindViewHolder(PersonViewHolder personViewHolder, final int i) {
-        personViewHolder.order_no.setText(restaurants.get(i).order_id);
-        personViewHolder.pick_up_time.setText(restaurants.get(i).pick_up_time);
-        personViewHolder.pick_up_by.setText(restaurants.get(i).pick_up_by);
-        personViewHolder.order_item_count.setText(restaurants.get(i).order_item_no);
-        personViewHolder.order_code.setText(restaurants.get(i).order_code);
-        personViewHolder.status.setText(restaurants.get(i).status);
+        personViewHolder.order_no.setText(String.valueOf(restaurants.get(i).getNumber()));
+        personViewHolder.pick_up_time.setText(restaurants.get(i).getPickUpTime());
+        personViewHolder.pick_up_by.setText(restaurants.get(i).getPickUpBy());
+        personViewHolder.order_item_count.setText(String.valueOf(restaurants.get(i).getOrderItemCount()));
+        personViewHolder.order_code.setText(restaurants.get(i).getOrderCode());
+        personViewHolder.status.setText(restaurants.get(i).getStatus());
 //        personViewHolder.restaurant_photo.setImageResource(restaurants.get(i).restaurant_photo);
 
 //        personViewHolder.confrim.setOnClickListener(new View.OnClickListener() {

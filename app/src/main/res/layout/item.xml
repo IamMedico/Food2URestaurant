@@ -19,11 +19,12 @@
             android:layout_width="30dp"
             android:layout_height="40dp"
             android:text=" 1 "
+            android:fontFamily="sans-serif"
             android:layout_margin="5dp"
             android:textSize="20dp" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="#737171"/>
 
@@ -33,10 +34,11 @@
             android:layout_height="40dp"
             android:text=" 12: 45 pm "
             android:layout_margin="5dp"
+            android:fontFamily="sans-serif"
             android:textSize="20dp" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="#737171"/>
 
@@ -46,10 +48,11 @@
             android:layout_height="40dp"
             android:text=" Rider 1 "
             android:layout_margin="5dp"
+            android:fontFamily="sans-serif"
             android:textSize="20dp" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="#737171"/>
 
@@ -58,11 +61,12 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:text=" 12 "
+            android:fontFamily="sans-serif"
             android:layout_margin="5dp"
             android:textSize="20dp" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="#737171"/>
 
@@ -72,14 +76,16 @@
             android:layout_height="40dp"
             android:text=" A123 "
             android:layout_margin="5dp"
+            android:fontFamily="sans-serif"
             android:textSize="20dp" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="#737171"/>
         <TextView
             android:id="@+id/status"
+            android:fontFamily="sans-serif"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:text=" New "

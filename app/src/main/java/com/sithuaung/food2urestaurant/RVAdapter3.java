@@ -1,5 +1,11 @@
 package com.sithuaung.food2urestaurant;
 
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -15,13 +21,13 @@ import java.util.List;
 /**
  * Created by sithuaung on 6/17/16.
  */
-public class RVAdapter2 extends RecyclerView.Adapter<RVAdapter2.PersonViewHolder>{
+public class RVAdapter3 extends RecyclerView.Adapter<RVAdapter3.PersonViewHolder>{
     List<Restaurant> restaurants;
     recycler_confirm_click rc;
 
 
 
-    RVAdapter2(List<Restaurant> restaurants){
+    RVAdapter3(List<Restaurant> restaurants){
         this.restaurants = restaurants;
     }
 
@@ -43,12 +49,12 @@ public class RVAdapter2 extends RecyclerView.Adapter<RVAdapter2.PersonViewHolder
 
     @Override
     public void onBindViewHolder(PersonViewHolder personViewHolder, final int i) {
-        personViewHolder.order_no.setText(String.valueOf(restaurants.get(i).number));
+        personViewHolder.order_no.setText(restaurants.get(i).getNumber());
         personViewHolder.pick_up_time.setText(restaurants.get(i).pickUpTime);
-        personViewHolder.pick_up_by.setText(restaurants.get(i).pickUpBy);
-        personViewHolder.order_item_count.setText(String.valueOf(restaurants.get(i).orderItemCount));
-        personViewHolder.order_code.setText(restaurants.get(i).orderCode);
-        personViewHolder.status.setText("pending");
+        personViewHolder.pick_up_by.setText(restaurants.get(i).getPickUpBy());
+        personViewHolder.order_item_count.setText(restaurants.get(i).getOrderItemCount());
+        personViewHolder.order_code.setText(restaurants.get(i).getOrderCode());
+        personViewHolder.status.setText(restaurants.get(i).getStatus());
     }
 
     @Override

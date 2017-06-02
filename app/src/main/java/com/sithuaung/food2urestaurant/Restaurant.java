@@ -4,71 +4,71 @@ package com.sithuaung.food2urestaurant;
  * Created by sithuaung on 6/21/16.
  */
 class Restaurant {
-         String order_id;
-    String pick_up_time;
-    String pick_up_by;
-    String order_item_no;
-    String order_code;
+    int orderItemCount;
+    int number;
     String status;
+    String pickUpBy;
+    String pickUpTime;
+    String orderCode;
 
-    public String getOrder_id() {
-        return order_id;
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public void setOrder_id(String order_id) {
-
-        this.order_id = order_id;
-    }
-
-
-    public void setPick_up_time(String pick_up_time) {
-        this.pick_up_time = pick_up_time;
-    }
-
-    public void setPick_up_by(String pick_up_by) {
-        this.pick_up_by = pick_up_by;
-    }
-
-    public void setOrder_item_no(String order_item_no) {
-        this.order_item_no = order_item_no;
-    }
-
-    public void setOrder_code(String order_code) {
-        this.order_code = order_code;
+    public void setOrderItemCount(int orderItemCount) {
+        this.orderItemCount = orderItemCount;
     }
 
     public void setStatus(String status) {
         this.status = status;
     }
 
-    public String getPick_up_time() {
-
-        return pick_up_time;
+    public void setPickUpBy(String pickUpBy) {
+        this.pickUpBy = pickUpBy;
     }
 
-    public String getPick_up_by() {
-        return pick_up_by;
+    public void setPickUpTime(String pickUpTime) {
+        this.pickUpTime = pickUpTime;
     }
 
-    public String getOrder_item_no() {
-        return order_item_no;
+    public void setOrderCode(String orderCode) {
+        this.orderCode = orderCode;
     }
 
-    public String getOrder_code() {
-        return order_code;
+    public int getNumber() {
+        return number;
+    }
+
+    public int getOrderItemCount() {
+        return orderItemCount;
     }
 
     public String getStatus() {
         return status;
     }
 
-    Restaurant(String pick_up_time, String pick_up_by, String order_item_no, String order_code, String status, String order_id) {
-        this.pick_up_time = pick_up_time;
-        this.pick_up_by = pick_up_by;
-        this.order_item_no = order_item_no;
-        this.order_code = order_code;
+    public String getPickUpBy() {
+        return pickUpBy;
+    }
+
+    public String getPickUpTime() {
+        return pickUpTime;
+    }
+
+
+
+    public String getOrderCode() {
+        return orderCode;
+    }
+
+    Restaurant(String pick_up_time, String pick_up_by, int order_item_no, String order_code, String status, int order_id) {
+        this.pickUpTime = pick_up_time;
+        this.pickUpBy = pick_up_by;
+        this.orderItemCount = order_item_no;
+        this.orderCode = order_code;
         this.status = status;
-        this.order_id=order_id;
+        this.number=order_id;
     }
     Restaurant(){
 

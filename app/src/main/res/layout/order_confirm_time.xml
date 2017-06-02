@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:weightSum="1">
+    <RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/group">
+
+    <RadioButton
+        android:text="5 min"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton" />
+
+
+    <RadioButton
+        android:text="20 min"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton1" />
+
+
+
+        <RadioButton
+            android:text="10 min"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2" />
+
+
+        <RadioButton
+            android:text="25 min"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton3" />
+
+
+
+        <RadioButton
+            android:text="15 min"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton4" />
+
+
+        <RadioButton
+            android:text="30 min"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton5" />
+
+
+</RadioGroup>
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:id="@+id/button"
+        android:elevation="12dp"
+
+        android:background="#D84EF611" />
+
+
+</LinearLayout>

@@ -50,6 +50,7 @@
                 android:layout_marginLeft="23dp"
                 android:layout_marginRight="23dp"
                 android:hint="User Name"
+                android:id="@+id/username"
                 android:textColor="#333"
                 android:textColorHint="#e4965b"
                 android:textSize="18sp" />
@@ -73,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="23dp"
                 android:layout_marginRight="23dp"
+                android:id="@+id/password"
                 android:hint="Password"
                 android:layout_marginTop="28dp"
                 android:textColor="#333"
@@ -109,15 +111,13 @@
         android:layout_width="match_parent"
         android:layout_marginTop="220dp"
         android:layout_height="120dp"
-        android:background="@mipmap/road_back"
-        >
+        android:background="#FD5C2A">
 
     <ImageView
         android:id="@+id/img"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
-
         android:src="@mipmap/rider"/>
     </LinearLayout>
 </LinearLayout>
