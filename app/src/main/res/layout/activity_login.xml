@@ -90,7 +90,7 @@
             android:layout_width="400dp"
             android:layout_height="50dp"
             android:gravity="center"
-            android:background="#feface"
+            android:background="@drawable/button"
             android:layout_marginLeft="23dp"
             android:layout_marginRight="23dp"
             android:layout_marginTop="44dp"

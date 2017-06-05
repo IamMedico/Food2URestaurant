@@ -1,5 +1,6 @@
 package com.sithuaung.food2urestaurant;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -57,7 +58,7 @@ public class LogInActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(txtusername.getText().toString().equals("") && txtpassword.getText().toString().equals(""))
                     Toast.makeText(LogInActivity.this,"Please Fill All Blanks",Toast.LENGTH_SHORT).show();
-                logIn();
+               else logIn();
 
             }
         });
@@ -90,6 +91,8 @@ public class LogInActivity extends AppCompatActivity {
 
     }
     private void logIn() {
+        final ProgressDialog loading = ProgressDialog.show(this, "Fetching Data", "Please wait...", false, false);
+
         //Here we will handle the http request to insert user to mysql db
         //Creating a RestAdapter
         RestAdapter adapter = new RestAdapter.Builder()
@@ -111,6 +114,7 @@ public class LogInActivity extends AppCompatActivity {
                     public void success(Response result, Response response) {
                         //On success we will read the server's output using bufferedreader
                         //Creating a bufferedreader object
+                        loading.dismiss();
                         BufferedReader reader = null;
 
                         //An string to store output from the server

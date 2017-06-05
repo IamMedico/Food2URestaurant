@@ -49,10 +49,10 @@ public class RVAdapter3 extends RecyclerView.Adapter<RVAdapter3.PersonViewHolder
 
     @Override
     public void onBindViewHolder(PersonViewHolder personViewHolder, final int i) {
-        personViewHolder.order_no.setText(restaurants.get(i).getNumber());
+        personViewHolder.order_no.setText(String.valueOf(restaurants.get(i).getNumber()));
         personViewHolder.pick_up_time.setText(restaurants.get(i).pickUpTime);
         personViewHolder.pick_up_by.setText(restaurants.get(i).getPickUpBy());
-        personViewHolder.order_item_count.setText(restaurants.get(i).getOrderItemCount());
+        personViewHolder.order_item_count.setText(String.valueOf(restaurants.get(i).getOrderItemCount()));
         personViewHolder.order_code.setText(restaurants.get(i).getOrderCode());
         personViewHolder.status.setText(restaurants.get(i).getStatus());
     }

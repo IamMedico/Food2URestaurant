@@ -35,8 +35,8 @@ import static com.sithuaung.food2urestaurant.MainActivity.ROOT_URL;
 public class Fragment_New extends Fragment implements RVAdapter1.recycler_confirm_click {
     RecyclerView recyclerView;
     public static RVAdapter1 recycler_adapter;
-    List<Restaurant> orders;
-    public static int pos_of_clicked=0;
+    public static List<Restaurant> orders;
+    public static int pos_of_clicked = 0;
 
 
     @Override
@@ -54,7 +54,7 @@ public class Fragment_New extends Fragment implements RVAdapter1.recycler_confir
 
                 NewOrderDialog dd = new NewOrderDialog(getActivity());
                 dd.show();
-                pos_of_clicked=position;
+                pos_of_clicked = position;
             }
 
             @Override
@@ -124,13 +124,12 @@ public class Fragment_New extends Fragment implements RVAdapter1.recycler_confir
 
         }
 
-
     }
 
 
     private void getOrders() {
         //While the app fetched data we are displaying a progress dialog
-        final ProgressDialog loading = ProgressDialog.show(getActivity(), "Fetching Data", "Please wait...", false, false);
+        final ProgressDialog loading = ProgressDialog.show(getContext(), "Fetching Data", "Please wait...", false, false);
 
         //Creating a rest adapter
         RestAdapter adapter = new RestAdapter.Builder()
@@ -174,10 +173,10 @@ public class Fragment_New extends Fragment implements RVAdapter1.recycler_confir
     }
 
     private void showList() {
-        //String array to store all the book names
+        // String array to store all the book names
         ArrayList<Restaurant> items = new ArrayList<>();
 
-        //     Traversing through the whole list to get all the names
+        // Traversing through the whole list to get all the names
         for (int i = 0; i < orders.size(); i++) {
             Restaurant item = new Restaurant();
             //Storing names to string array
@@ -195,6 +194,5 @@ public class Fragment_New extends Fragment implements RVAdapter1.recycler_confir
         recyclerView.setAdapter(recycler_adapter);
 
     }
-
 
 }

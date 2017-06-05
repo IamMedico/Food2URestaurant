@@ -1,6 +1,7 @@
 package com.sithuaung.food2urestaurant;
 
 import android.graphics.Color;
+import android.support.annotation.StringDef;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -8,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.Toast;
 
 import it.neokree.materialtabs.MaterialTab;
@@ -19,7 +21,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     MaterialTabHost tabHost;
     ViewPager pager;
     ViewPagerAdapter adapter;
-    public static MaterialBadgeTextView badge_new,badge_pending,badge_history;
+    MaterialBadgeTextView badge_new;
     String [] tab_name= { "New "," Pending ", " History " };
     public static final String ROOT_URL = "https://baccivorous-servos.000webhostapp.com/";
 
@@ -42,8 +44,8 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         pager = (ViewPager) this.findViewById(R.id.pager);
 
         badge_new=(MaterialBadgeTextView)this.findViewById(R.id.badge_notification_1);
-        badge_pending=(MaterialBadgeTextView)this.findViewById(R.id.badge_notification_2);
-        badge_history=(MaterialBadgeTextView)this.findViewById(R.id.badge_notification_3);
+
+         badge_new.setVisibility(View.INVISIBLE);
 
 
         // init view pager
@@ -54,6 +56,10 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
             public void onPageSelected(int position) {
                 // when user do a swipe the selected tab change
                 tabHost.setSelectedNavigationItem(position);
+                if(position==0 && CustomDialogClass.count_of_badge_new!=0){
+                    badge_new.setText(String.valueOf(CustomDialogClass.count_of_badge_new));
+                    badge_new.setVisibility(View.VISIBLE);
+                }
 
 
             }
@@ -61,7 +67,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-                changeColor(position);
+                // changeColor(position);
             }
         });
 
@@ -86,46 +92,52 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     public void onTabSelected(MaterialTab tab) {
         pager.setCurrentItem(tab.getPosition());
         int pos= tab.getPosition();
-        changeColor(pos);
-    }
-
-    private void changeColor(int pos) {
-        switch (pos){
-            case 0: {
-                badge_new.setBackgroundColor(Color.parseColor("#f5e722"));
-                badge_pending.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_history.setBackgroundColor(Color.parseColor("#fffde7"));
-//                badge_new.setText(String.valueOf(Fragment_New.getCount()));
-//                badge_pending.setText(String.valueOf(Fragment_Pending.getCount()));
-               // badge_history.setText(String.valueOf(Fragment_History.getCount()));
-
-            } break;
-            case 1: {
-                badge_pending.setBackgroundColor(Color.parseColor("#f5e722"));
-                badge_new.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_history.setBackgroundColor(Color.parseColor("#fffde7"));
-
-            } break;
-            case 2: {
-                badge_history.setBackgroundColor(Color.parseColor("#f5e722"));
-                badge_pending.setBackgroundColor(Color.parseColor("#fffde7"));
-                badge_new.setBackgroundColor(Color.parseColor("#fffde7"));
-
-            } break;
-
+        if(pos
+                ==0 && CustomDialogClass.count_of_badge_new!=0){
+            badge_new.setText(String.valueOf(CustomDialogClass.count_of_badge_new));
+            badge_new.setVisibility(View.VISIBLE);
         }
+
+
+        //  changeColor(pos);
     }
 
-    public void changeBadgeNumber() {
+//    private void changeColor(int pos) {
+//        switch (pos){
+//            case 0: {
+//                badge_new.setBackgroundColor(Color.parseColor("#f5e722"));
+//                badge_pending.setBackgroundColor(Color.parseColor("#fffde7"));
+//                badge_history.setBackgroundColor(Color.parseColor("#fffde7"));
+//
+//
+//            } break;
+//            case 1: {
+//                badge_pending.setBackgroundColor(Color.parseColor("#f5e722"));
+//                badge_new.setBackgroundColor(Color.parseColor("#fffde7"));
+//                badge_history.setBackgroundColor(Color.parseColor("#fffde7"));
+//
+//
+//            } break;
+//            case 2: {
+//                badge_history.setBackgroundColor(Color.parseColor("#f5e722"));
+//                badge_pending.setBackgroundColor(Color.parseColor("#fffde7"));
+//                badge_new.setBackgroundColor(Color.parseColor("#fffde7"));
+//
+//            } break;
+//
+//        }
+//    }
 
-        int count1=Fragment_New.recycler_adapter.getItemCount();
-        badge_new.setText(String.valueOf(count1));
-        int count2=Fragment_Pending.recycler_adapter.getItemCount();
-        badge_pending.setText(String.valueOf(count2));
-        int count3=Fragment_History.recycler_adapter.getItemCount();
-        badge_history.setText(String.valueOf(count3));
-
-    }
+//    public void changeBadgeNumber() {
+//
+//        int count1=Fragment_New.recycler_adapter.getItemCount();
+//        badge_new.setText(String.valueOf(count1));
+//        int count2=Fragment_Pending.recycler_adapter.getItemCount();
+//        badge_pending.setText(String.valueOf(count2));
+//        int count3=Fragment_History.recycler_adapter.getItemCount();
+//        badge_history.setText(String.valueOf(count3));
+//
+//    }
 
 
     @Override

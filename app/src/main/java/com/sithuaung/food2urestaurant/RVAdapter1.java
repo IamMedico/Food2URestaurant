@@ -96,6 +96,12 @@ public class RVAdapter1 extends RecyclerView.Adapter<RVAdapter1.PersonViewHolder
 
     }
 
+    public  void add(Restaurant res){
+        restaurants.add(res);
+        notifyDataSetChanged();
+
+    }
+
     public  void remove(int position){
         restaurants.remove(position);
         notifyDataSetChanged();

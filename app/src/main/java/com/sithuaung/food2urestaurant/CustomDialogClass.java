@@ -15,6 +15,7 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener{
     public Activity activity;
     public Dialog dialog;
     public Button gotit;
+    public static int count_of_badge_new;
     public CustomDialogClass(Activity a)
     {
         super(a);
@@ -33,5 +34,7 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         dismiss();
+        count_of_badge_new=Fragment_New.orders.size();
+
     }
 }

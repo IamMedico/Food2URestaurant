@@ -40,28 +40,28 @@
         android:text="8" />
 
 
-    <com.sithuaung.food2urestaurant.MaterialBadgeTextView
-        android:id="@+id/badge_notification_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#f5e722"
-        android:layout_marginLeft="330dp"
-        android:textSize="14sp"
-        android:layout_marginTop="54dp"
-        android:textColor="@android:color/black"
-        android:text="8" />
+    <!--<com.sithuaung.food2urestaurant.MaterialBadgeTextView-->
+        <!--android:id="@+id/badge_notification_2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#f5e722"-->
+        <!--android:layout_marginLeft="330dp"-->
+        <!--android:textSize="14sp"-->
+        <!--android:layout_marginTop="54dp"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:text="8" />-->
 
 
-    <com.sithuaung.food2urestaurant.MaterialBadgeTextView
-        android:id="@+id/badge_notification_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#f5e722"
-        android:layout_marginLeft="530dp"
-        android:textSize="14sp"
-        android:layout_marginTop="54dp"
-        android:textColor="@android:color/black"
-        android:text="8" />
+    <!--<com.sithuaung.food2urestaurant.MaterialBadgeTextView-->
+        <!--android:id="@+id/badge_notification_3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#f5e722"-->
+        <!--android:layout_marginLeft="530dp"-->
+        <!--android:textSize="14sp"-->
+        <!--android:layout_marginTop="54dp"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:text="8" />-->
 
 
 
